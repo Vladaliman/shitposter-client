@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import withStyles from "@material-ui/core/styles/withStyles";
 import PropTypes from "prop-types";
 import AppIcon from "../images/shit-image.jpg";
-import axios from "axios";
+
 import { Link } from "react-router-dom";
 //Mui stuff
 import Grid from "@material-ui/core/Grid";
