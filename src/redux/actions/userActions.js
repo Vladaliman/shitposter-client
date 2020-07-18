@@ -4,6 +4,7 @@ import {
   CLEAR_ERRORS,
   LOADING_UI,
   SET_UNAUTHENTICATED,
+  LOADING_USER,
 } from "../types";
 import axios from "axios";
 
@@ -49,13 +50,8 @@ export const logoutUser = () => (dispatch) => {
   dispatch({ type: SET_UNAUTHENTICATED });
 };
 
-const setAuthorizationHeader = (token) => {
-  const FBIdToken = `Bearer ${token}`;
-  localStorage.setItem("FBIdToken", `Bearer ${token}`);
-  axios.defaults.headers.common["Authorization"] = FBIdToken;
-};
-
 export const getUserData = () => (dispatch) => {
+  dispatch({ type: LOADING_USER });
   axios
     .get("/user")
     .then((res) => {
@@ -65,4 +61,10 @@ export const getUserData = () => (dispatch) => {
       });
     })
     .catch((err) => console.log(err));
+};
+
+const setAuthorizationHeader = (token) => {
+  const FBIdToken = `Bearer ${token}`;
+  localStorage.setItem("FBIdToken", `Bearer ${token}`);
+  axios.defaults.headers.common["Authorization"] = FBIdToken;
 };
