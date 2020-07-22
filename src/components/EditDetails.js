@@ -6,7 +6,7 @@ import MyButton from "../util/MyButton";
 import { connect } from "react-redux";
 import { editUserDetails } from "../redux/actions/userActions";
 //Mui Stuff
-import Tooltip from "@material-ui/core/Tooltip";
+
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import Dialog from "@material-ui/core/Dialog";
@@ -15,7 +15,6 @@ import DialogContent from "@material-ui/core/DialogContent";
 import DialogTitle from "@material-ui/core/DialogTitle";
 // Icons
 import EditIcon from "@material-ui/icons/Edit";
-import { IconButton } from "@material-ui/core";
 
 const styles = (theme) => ({
   button: {
