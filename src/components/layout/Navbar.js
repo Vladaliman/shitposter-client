@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
 import { Link } from "react-router-dom";
-import MyButton from "../util/MyButton";
-import PostScream from "./PostScream";
+import MyButton from "../../util/MyButton";
+import PostScream from "../scream/PostScream";
 //Redux
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
