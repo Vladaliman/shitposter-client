@@ -101,6 +101,22 @@ export const deleteScream = (screamId) => (dispacth) => {
       console.log(err);
     });
 };
+
+export const getUserData = (userHandle) => (dispacth) => {
+  dispacth({ type: LOADING_DATA });
+  axios
+    .get(`/user/${userHandle}`)
+    .then((res) => {
+      dispacth({ type: SET_SCREAMS, payload: res.data.screams });
+    })
+    .catch(() => {
+      dispacth({
+        type: SET_SCREAMS,
+        payload: null,
+      });
+    });
+};
+
 // this is a action creator
 export const clearErrors = () => (dispatch) => {
   dispatch({ type: CLEAR_ERRORS });

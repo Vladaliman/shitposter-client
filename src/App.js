@@ -17,6 +17,7 @@ import AuthRoute from "./util/AuthRoute";
 import home from "./pages/home";
 import login from "./pages/login";
 import signUp from "./pages/signUp";
+import user from "./pages/user";
 import axios from "axios";
 
 const theme = createMuiTheme(themeFile);
@@ -46,6 +47,7 @@ export class App extends Component {
                 <Route exact path="/" component={home}></Route>
                 <AuthRoute exact path="/login" component={login}></AuthRoute>
                 <AuthRoute exact path="/signup" component={signUp}></AuthRoute>
+                <Route exact path="/user/:handle" component={user}></Route>
               </Switch>
             </div>
           </Router>
