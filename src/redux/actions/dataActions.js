@@ -108,6 +108,7 @@ export const getUserData = (userHandle) => (dispacth) => {
     .get(`/user/${userHandle}`)
     .then((res) => {
       dispacth({ type: SET_SCREAMS, payload: res.data.screams });
+      console.log(res.data.screams);
     })
     .catch(() => {
       dispacth({
