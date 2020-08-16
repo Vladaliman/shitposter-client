@@ -29,6 +29,9 @@ const styles = (theme) => ({
     left: "91%",
     top: "6%",
   },
+  textField: {
+    margin: "10px auto 10px auto",
+  },
 });
 
 class PostScream extends Component {

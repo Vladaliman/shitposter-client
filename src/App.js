@@ -48,6 +48,11 @@ export class App extends Component {
                 <AuthRoute exact path="/login" component={login}></AuthRoute>
                 <AuthRoute exact path="/signup" component={signUp}></AuthRoute>
                 <Route exact path="/user/:handle" component={user}></Route>
+                <Route
+                  exact
+                  path="/user/:handle/scream/:screamId"
+                  component={user}
+                ></Route>
               </Switch>
             </div>
           </Router>
