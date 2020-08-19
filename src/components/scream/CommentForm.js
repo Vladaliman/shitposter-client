@@ -54,7 +54,7 @@ class CommentForm extends Component {
             name="body"
             type="text"
             label="Comment on Scream"
-            error={errors.comment ? 1 : 0}
+            error={errors.comment ? true : false}
             helperText={errors.comment}
             value={this.state.body}
             onChange={this.handleChange}
