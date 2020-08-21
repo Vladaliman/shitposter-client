@@ -53,7 +53,7 @@ class Scream extends Component {
         credentials: { handle },
       },
     } = this.props;
-
+    console.log(classes.style);
     const deleteButton =
       authenticated && userHandle === handle ? (
         <DeleteScream screamId={screamId} />
